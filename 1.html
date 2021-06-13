@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2021-06-10</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><p></p><div class="toc"><h3>《通信软件开发与应用》课程结业报告</h3><ul><li><a href="#_1">一、要求以及所选主题</a></li><li><a href="#_10">二.开发过程</a></li><ul><li><a href="#1_11">1.选择模板的思考过程</a></li><li><a href="#2_13">2.头部设计</a></li><ul><li><a href="#_105">②三国故事</a></li><li><a href="#_147">③三足鼎立</a></li><li><a href="#_203">④三国演义的好评</a></li><li><a href="#_281">⑤经典画面</a></li><li><a href="#_336">⑥脑洞大开</a></li></ul></ul><li><a href="#_417">三.发现问题以及如何解决</a></li><ul><li><a href="#__418">问题一 如何将做的网页托管到平台上</a></li><li><a href="#_432">关于三国演义</a></li></ul><li><a href="#_437">四.心得体会</a></li></ul></div><p></p>
+<h1><a id="_1"></a>一、要求以及所选主题</h1>
+<p>我根据课程结业要求，选择A主题，即静态网站。可使用你喜欢的任何CSS框架如BootStrap、MDB、tailwind等，页面不少于5个，最后一个页面放置结业报告的超链接。网站需部署到你喜欢的托管服务器上如github等。<br>
+撰写结业报告，要求如下：<br>
+A. 题目为《通信软件开发与应用》课程结业报告；<br>
+B. 报告需阐述：做的什么、开发过程、遇到的问题、如何解决、哪些未解决、总结；<br>
+C. 该报告需表现为HTML格式，从你上面的网站中可访问到。<br>
+【注】：因为我最近在读《三国演义》，原著和94版电视剧我都很喜欢，所以做了这样一个主题。</p>
+<h1><a id="_10"></a>二.开发过程</h1>
+<h2><a id="1_11"></a>1.选择模板的思考过程</h2>
+<p>我做的是一个比较简单的网页，所以就选择了MDB框架来进行设计。作为中国四大名著之一，三国演义和内涵也不是我能说得清的，我也只是看到了一些我喜欢的故事。我把三国演义分为了四部分，第一部分是群雄逐鹿，这一部分豪杰并起，群雄割据，是英雄最多也是变数最大的时段；第二部分是赤壁鏖战，主要是曹操败袁绍后统一北方，又图江南时败于周瑜，奠定了三足鼎立的基础；第三部分是刘备借荆州之后，力夺四郡，智取汉中，南征北战的部分，三足鼎立之势已成；最后一部分英雄迟暮，各大人物凋零，司马炎最终篡魏统一三国。</p>
+<h2><a id="2_13"></a>2.头部设计</h2>
+<p>这是网页的主题所在，以及还有导航条的设置，它可以快速锁定所需要的内容，是网页开发极其重要的内容。导航条使用了一个&lt; nav &gt;标签，其内容包括三个部分，包括&lt; a &gt;超链接，来实现网页的快速跳转，&lt; button &gt;按钮来实现点击，区块，用于放置各个导航超链接。<br>
+头部主题部分的代码为</p>
+<pre><code class="prism language-javascript"><span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>三国演义<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"css/bootstrap.css"</span> rel<span class="token operator">=</span><span class="token string">'stylesheet'</span> type<span class="token operator">=</span><span class="token string">'text/css'</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token function">jQuery</span> <span class="token punctuation">(</span>Bootstrap's JavaScript plugins<span class="token punctuation">)</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"js/jquery.min.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Custom Theme files <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"css/style.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> type<span class="token operator">=</span><span class="token string">"text/css"</span> media<span class="token operator">=</span><span class="token string">"all"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> Custom Theme files <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string">"Content-Type"</span> content<span class="token operator">=</span><span class="token string">"text/html; charset=utf-8"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"keywords"</span> content<span class="token operator">=</span>"Spicy Cuisine Responsive web template<span class="token punctuation">,</span> Bootstrap Web Templates<span class="token punctuation">,</span> Flat Web Templates<span class="token punctuation">,</span> Andriod Compatible web template<span class="token punctuation">,</span> 
+Smartphone Compatible web template<span class="token punctuation">,</span> free webdesigns <span class="token keyword">for</span> Nokia<span class="token punctuation">,</span> Samsung<span class="token punctuation">,</span> <span class="token constant">LG</span><span class="token punctuation">,</span> SonyErricsson<span class="token punctuation">,</span> Motorola web design" <span class="token operator">/</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"application/x-javascript"</span><span class="token operator">&gt;</span> <span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"load"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span>hideURLbar<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">function</span> <span class="token function">hideURLbar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span> window<span class="token punctuation">.</span><span class="token function">scrollTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>webfont<span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">'http://fonts.useso.com/css?family=Raleway:400,200,100,300,500,600,700,800,900'</span> rel<span class="token operator">=</span><span class="token string">'stylesheet'</span> type<span class="token operator">=</span><span class="token string">'text/css'</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">'http://fonts.useso.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,300italic,400italic,600italic,700italic'</span> rel<span class="token operator">=</span><span class="token string">'stylesheet'</span> type<span class="token operator">=</span><span class="token string">'text/css'</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span> start<span class="token operator">-</span>smoth<span class="token operator">-</span>scrolling<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"js/move-top.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"js/easing.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
+			<span class="token function">jQuery</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">$</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">".scroll"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span><span class="token punctuation">{</span>		
+					event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'html,body'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>scrollTop<span class="token operator">:</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>hash<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">offset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>top<span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">900</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span> start<span class="token operator">-</span>smoth<span class="token operator">-</span>scrolling<span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>animated<span class="token operator">-</span>css<span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string">"css/animate.css"</span> rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> type<span class="token operator">=</span><span class="token string">"text/css"</span> media<span class="token operator">=</span><span class="token string">"all"</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"js/wow.min.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+ <span class="token keyword">new</span> <span class="token class-name">WOW</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">/</span>animated<span class="token operator">-</span>css<span class="token operator">--</span><span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+</code></pre>
+<pre><code>## 4.内容部分设计
+### ①感受三国故事的魅力
+我喜欢三国故事，我觉得三国故事很有魅力，我也希望有更多的可以喜欢三国的故事。右上顶部有五个超链接，点击可以跳转到相应部分。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2021061022224824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70)
+
+这一部分的主要代码为：
+```javascript
+&lt;div class="banner"&gt;
+	 &lt;div class="container"&gt;
+		 &lt;div class="header"&gt;
+			 &lt;div class="logo wow fadeInLeft" data-wow-delay="0.5s"&gt;
+			 &lt;a href="index.html"&gt;&lt;img src="images/logo2.png" alt=""/&gt;&lt;/a&gt;
+			 &lt;/div&gt;
+			 &lt;div class="top-menu"&gt;
+			 &lt;span class="menu"&gt;&lt;/span&gt;
+				 &lt;ul&gt;
+				 &lt;li class="active"&gt;&lt;a href="index.html"&gt;三国演义&lt;/a&gt;&lt;/li&gt;
+				 &lt;li&gt;&lt;a class="scroll" href="#Cusinies"&gt;三国故事&lt;/a&gt;&lt;/li&gt;
+				 &lt;li&gt;&lt;a class="scroll" href="#about"&gt;三足鼎立&lt;/a&gt;&lt;/li&gt;				 
+				 &lt;li&gt;&lt;a class="scroll" href="#Gallery"&gt;经典画面&lt;/a&gt;&lt;/li&gt;
+				 &lt;li&gt;&lt;a class="scroll" href="#contact"&gt;脑洞大开&lt;/a&gt;&lt;/li&gt;			 
+				 &lt;/ul&gt;
+			 &lt;/div&gt;
+			  &lt;!-- script-for-menu --&gt;
+		 &lt;script&gt;
+				$("span.menu").click(function(){
+					$(".top-menu ul").slideToggle("slow" , function(){
+					});
+				});
+		 &lt;/script&gt;
+		 &lt;!-- script-for-menu --&gt;	  	
+
+			 &lt;div class="clearfix"&gt;&lt;/div&gt;
+		 &lt;/div&gt;
+		 &lt;div class="banner-info"&gt;
+			&lt;h1&gt;感受三国故事的魅力&lt;/h1&gt;
+			 &lt;div class="col-md-6 banner-text wow fadeInRight" data-wow-delay="0.5s"&gt;				 	
+					 &lt;img src="./images/QQ图片20210610124733.jpg" alt=""/&gt;
+				 &lt;a class="download hvr-shutter-out-horizontal" href="#"&gt;冲啊&lt;/a&gt;				 
+			 &lt;/div&gt;
+			 
+			 &lt;div class="clearfix"&gt;&lt;/div&gt;
+		 &lt;/div&gt;
+	 &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h3><a id="_105"></a>②三国故事</h3>
+<p>这一部分我选择了算是三国故事的转折点的事件。第一张图是十八路诸侯讨伐董卓，是群雄并起的时代；第二张图是曹操攻打赤壁之前横槊赋诗，也算是意气风发，有着对酒当歌，人生几何的豪气；第三张图是力夺四郡之时，关云长请战长沙，却不好意思直说，被玄德孔明调侃的时候，那时候算是季汉集团的巅峰，大家都在一起奋战，其乐融融；第四部分是三分归晋。<br>
+<img src="https://img-blog.csdnimg.cn/20210610223108214.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210610223201324.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>三国故事的代码为：</p>
+<pre><code class="prism language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"Cusinies"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"features"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"features-head"</span><span class="token operator">&gt;</span>			
+			 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>三国故事<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"features-section"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 feature-grid"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> src<span class="token operator">=</span><span class="token string">"./images/CJN059DM7XY)W[A{CC(G3TL.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>群雄逐鹿<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>黄巾猖獗<span class="token punctuation">,</span>群雄并起，董卓霸京师，图为十八镇诸侯响应讨伐董卓，歃血会盟<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 feature-grid"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> src<span class="token operator">=</span><span class="token string">"./images/_U[~N)@2$IDG576MK)%XGJ7.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>赤壁鏖战<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>赤壁之战奠定了三国鼎立的基础，是赫赫有名的以少胜多的重大战役。图为曹老板横槊赋诗，对酒当歌，人生几何<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 feature-grid"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> src<span class="token operator">=</span><span class="token string">"./images/X@(TVD2[IA}}WJ1~O[LDULR.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>南征北战<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>三国鼎立之势已成，刘备以荆州为本，力夺四郡，智取汉中。图为关云长请战长沙时鱼水君臣大笑<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 feature-grid"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>img <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> src<span class="token operator">=</span><span class="token string">"./images/IV45XR2S5LO@28C%$1I@X`R.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>三分归晋<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>魏主政归司马氏，魏篡位而得的江山终归了司马炎。图为魏帝禅位，司马炎得传国玉玺<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+<h3><a id="_147"></a>③三足鼎立</h3>
+<p>主要附带了两张地图，可以清晰地看到三国的地势，同时文字大概概括了三国的主要故事。在那个鼓角争鸣，刀光剑影的时代，文争武斗，多少英雄豪杰看花了眼，那一幅幅荡人心弦的画面凝固远去，成为历史的瞬间。<br>
+<img src="https://img-blog.csdnimg.cn/20210610223640752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这一部分代码为：</p>
+<pre><code class="prism language-javascript"> <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"about"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"about"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"about-top"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 about-device wow fadeInLeft"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/g2.jpg"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 about-device-info wow fadeInRight"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device-text"</span><span class="token operator">&gt;</span>					 
+					 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>鼓角铮鸣<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>	
+					 <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+						 东汉末年，群雄割据，董卓入京，祸乱朝廷；
+						 典军校尉曹操，讨董卓、破吕布、败袁绍、远征乌桓，一统北方，而后征马超、破韩遂，拿定西凉，欲征荆州以霸天下，却兵败于赤壁；
+						 涿郡刘关张桃园结义，征战四方，三顾茅庐、结孙权、破曹操、借荆州、取巴蜀，成就一番霸业；
+						 江东孙权，兵精粮足，又有三江之固、长江天堑，据江东而虎视天下；
+						 三国鼎立，互相争斗，东征西讨，互有胜负，闷声发财司马懿，三国归晋。
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div 
+				      <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"about-list"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>		
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"about-bottom"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 about-customize wow fadeInRight"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"device-text-bottom"</span><span class="token operator">&gt;</span>
+					<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>刀光剑影<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					<span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>	
+					<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>
+					暗淡了刀光剑影，远去了鼓角铮鸣
+					眼前飞扬着一个个鲜活的面容
+					湮没了黄尘古道，荒芜了烽火边城
+					岁月啊你带不走那一串串熟悉的姓名
+					兴亡谁人定，盛衰岂无凭
+					一夜风云散，变幻了时空
+					聚散皆是缘，离合总关情
+					担当生前事，何计身后评
+					长江有意化作泪，长江有情起歌声
+					历史的天空闪烁几颗星，人间一股英雄气在驰骋纵横
+				   
+					   
+					<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app-dwnld"</span><span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"app"</span> href<span class="token operator">=</span><span class="token string">"#"</span><span class="token operator">&gt;</span>上页<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"play"</span> href<span class="token operator">=</span><span class="token string">"#"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"./images/logo2.png"</span>alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span> <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>				 
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 about-device-bottom wow fadeInLeft"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/phn2.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+<h3><a id="_203"></a>④三国演义的好评</h3>
+<p>我在这一部分加入了一些名人对三国演义的评价，主要有七个，他们对三国演义的评价是很高的，值得反复阅读。这一部分七个评论是轮流出现的，过六秒显示。<br>
+第一张：<br>
+<img src="https://img-blog.csdnimg.cn/20210610224352421.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>
+最后一张：<br>
+<img src="https://img-blog.csdnimg.cn/20210610224329412.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这一部分的代码为：</p>
+<pre><code class="prism language-javascript"><span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"pricing"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"pricing-text"</span><span class="token operator">&gt;</span>			
+			<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>三国演义好评<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>	
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> start slider <span class="token operator">--</span><span class="token operator">&gt;</span>	
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"pricing-grids"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"slider"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>ul <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"rslides"</span> id<span class="token operator">=</span><span class="token string">"slider2"</span><span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>						 
+					     <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>看这本书（《三国演义》），不但要看战争，看外交，而且要看组织。——毛泽东<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>《三国演义》是那段历史的一座人才宝库，也是一部活的兵书，是一座军事大课堂。——袁阔成<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						
+					      <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						  
+					  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>	
+					  <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>						    
+						 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>《三国演义》的社会影响，远远超过了它的文学价值。显然，就文学而论，它的人物塑造功夫也确是第一流的，中国后世的小说家都从其中吸取了营养。——金庸<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>	
+						  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>《三国演义》在表现着中国人民艺术天才的许多长篇小说之中占有显著的地位，它可说是一部真正具有丰富人民性的杰作。——（俄）科洛克洛夫<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+					      <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						  
+					  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					  <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>						 
+					     <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>《三国演义》结构之宏伟与人物活动地域舞台之广大，世界古典小说均无与伦比。——（日）吉川英治<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>一部《三国》，有时是“暴力”的蒙汗药，有时是“极权”的挡箭牌，有时又是“诡计”的密钥机，而这段动乱历史的创伤记忆被装潢为“分合之道”。——潘知常<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						
+					      <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						  
+					  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>	
+					  <span class="token operator">&lt;</span>li<span class="token operator">&gt;</span>						    
+						 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 pricing-plans"</span><span class="token operator">&gt;</span>
+							  <span class="token operator">&lt;</span>p<span class="token operator">&gt;</span> 《水浒传》和《三国演义》这两部小说把中国的人心推入黑暗的深渊，使中国人原是非常纯朴、非常平和的心灵发生变形、变态、变质，变得愈来愈可怕。——刘再复<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+							  
+							  
+							  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+						 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>	
+						  
+					      <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>						  
+					  <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+			   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			   <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> end slider <span class="token operator">--</span><span class="token operator">&gt;</span>
+		  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>  	
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+</code></pre>
+<h3><a id="_281"></a>⑤经典画面</h3>
+<p>这一部分我从94版三国演义中截取了几张很经典的很美的画面，使我很震撼，也历来被人推崇。<br>
+<img src="https://img-blog.csdnimg.cn/20210610224759319.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>经典画面这部分的代码为：</p>
+<pre><code class="prism language-javascript"><span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"Gallery"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"content"</span><span class="token operator">&gt;</span>
+   	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"gallery-head"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>经典画面<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+   		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"gallery-top"</span><span class="token operator">&gt;</span>
+			  <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"gallery"</span><span class="token operator">&gt;</span>
+				  <span class="token operator">&lt;</span>ul<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r11.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r11.jpg"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>观沧海<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r22.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r22.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>千里走单骑<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r33.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r33.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>孔明子敬<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"last wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r44.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r44.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>玄德尚香<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>				 
+
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r55.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r55.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>秋风五丈原<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r66.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r66.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>云长义薄云天<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"images/r77.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r77.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>周郎小乔<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>li <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"last wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span><span class="token operator">&gt;</span>
+					 	<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"./images/r88.jpg"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"images/r88.jpg"</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+						<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>残阳如血<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">&gt;</span>					
+					 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+					<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">&gt;</span>
+			  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+</code></pre>
+<h3><a id="_336"></a>⑥脑洞大开</h3>
+<p>我把最后一部分当成了脑洞大开，以为我一直对三国后期英雄迟暮很感伤，我希望也许可以给他们续写一个美好的故事。另外，看三国演义时总有人说历史上这个人/事根本不是这样的，结果这人还不一定看过三国志。要想了解真正的他们，三国志是更好的选择，可以将三国志和三国演义做个对比。<br>
+<img src="https://img-blog.csdnimg.cn/20210610225520324.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NzU5ODQ0OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>最后一部分的代码：</p>
+<pre><code class="prism language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"js/jquery.lightbox.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string">"stylesheet"</span> type<span class="token operator">=</span><span class="token string">"text/css"</span> href<span class="token operator">=</span><span class="token string">"css/lightbox.css"</span> media<span class="token operator">=</span><span class="token string">"screen"</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+		<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
+			<span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				<span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.gallery a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">lightBox</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"contact"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"contact"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"contact-text"</span><span class="token operator">&gt;</span>			
+			<span class="token operator">&lt;</span>h3<span class="token operator">&gt;</span>你最喜欢的三国人物<span class="token operator">&lt;</span><span class="token operator">/</span>h3<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span>	
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"contact-grids"</span><span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-4 contact-grid text-center wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span><span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon1"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>人物名字<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>姓甚名谁还有字<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-4 contact-grid text-center wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span><span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon2"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span>喜欢的理由<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+				<span class="token operator">&lt;</span>p<span class="token operator">&gt;</span><span class="token number">20</span>字以内<span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+				
+			<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-4 contact-grid text-center wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"icon3"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"mailto:example.com"</span><span class="token operator">&gt;</span>做个假设，你会如何给他续写故事？<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+		 
+		 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"contact-details"</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span>form<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 contact-left"</span><span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"text wow fadeInLeft"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> value<span class="token operator">=</span><span class="token string">"豪杰姓名 "</span> onfocus<span class="token operator">=</span><span class="token string">"this.value = '';"</span> onblur<span class="token operator">=</span><span class="token string">"if (this.value == '') {this.value = '豪杰姓名 ';}"</span><span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"text wow fadeInLeft"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> value<span class="token operator">=</span><span class="token string">"喜欢的理由"</span> onfocus<span class="token operator">=</span><span class="token string">"this.value = '';"</span> onblur<span class="token operator">=</span><span class="token string">"if (this.value == '') {this.value = '喜欢的理由';}"</span><span class="token operator">&gt;</span>
+					 <span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"text wow fadeInLeft"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> value<span class="token operator">=</span><span class="token string">"史书中经历&amp;演义"</span> onfocus<span class="token operator">=</span><span class="token string">"this.value = '';"</span> onblur<span class="token operator">=</span><span class="token string">"if (this.value == '') {this.value = '史书中经历&amp;演义 ';}"</span><span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"col-md-6 contact-right"</span><span class="token operator">&gt;</span>
+					<span class="token operator">&lt;</span>textarea <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow fadeInRight"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> value<span class="token operator">=</span><span class="token string">"续写的故事"</span> onfocus<span class="token operator">=</span><span class="token string">"this.value = '';"</span> onblur<span class="token operator">=</span><span class="token string">"if (this.value == '') {this.value = '续写的故事';}"</span><span class="token operator">&gt;</span>续写的故事<span class="token operator">&lt;</span><span class="token operator">/</span>textarea<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"clearfix"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+				 <span class="token operator">&lt;</span>input <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow fadeInRight"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span> type<span class="token operator">=</span><span class="token string">"submit"</span> value<span class="token operator">=</span><span class="token string">"提交"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+			 <span class="token operator">&lt;</span><span class="token operator">/</span>form<span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>		 
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"map"</span><span class="token operator">&gt;</span>
+		 <span class="token operator">&lt;</span>iframe src<span class="token operator">=</span><span class="token string">"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3593.1651928596452!2d-80.18708473414607!3d25.765106655121123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b42909d18c97%3A0x97689362b4db9e7e!2sBrickell+Park!5e0!3m2!1sen!2sin!4v1425979652981"</span> frameborder<span class="token operator">=</span><span class="token string">"0"</span> style<span class="token operator">=</span><span class="token string">"border:0"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>iframe<span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"footer text-center"</span><span class="token operator">&gt;</span>
+	 <span class="token operator">&lt;</span>div <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"container"</span><span class="token operator">&gt;</span>		
+		 <span class="token operator">&lt;</span>a <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.5s"</span> href<span class="token operator">=</span><span class="token string">"index.html"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span>img src<span class="token operator">=</span><span class="token string">"./images/logo2.png"</span> alt<span class="token operator">=</span><span class="token string">""</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>		 
+		 <span class="token operator">&lt;</span>p <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"wow bounceIn"</span> data<span class="token operator">-</span>wow<span class="token operator">-</span>delay<span class="token operator">=</span><span class="token string">"0.4s"</span><span class="token operator">&gt;</span>不下雨的上方谷 <span class="token operator">&amp;</span>copy<span class="token punctuation">;</span> <span class="token number">2021</span>六月<span class="token operator">&lt;</span>a target<span class="token operator">=</span><span class="token string">"_blank"</span> href<span class="token operator">=</span><span class="token string">"http://www.sdmzh.com.cn/map/gcc.html"</span><span class="token operator">&gt;</span>三国地图<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+		 
+	 <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span><span class="token operator">&gt;</span>
+		<span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				
+		<span class="token function">$</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">UItoTop</span><span class="token punctuation">(</span><span class="token punctuation">{</span> easingType<span class="token operator">:</span> <span class="token string">'easeOutQuart'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"#to-top"</span> id<span class="token operator">=</span><span class="token string">"toTop"</span> style<span class="token operator">=</span><span class="token string">"display: block;"</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span>span id<span class="token operator">=</span><span class="token string">"toTopHover"</span> style<span class="token operator">=</span><span class="token string">"opacity: 1;"</span><span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span><span class="token operator">--</span><span class="token operator">&gt;</span>
+
+ <span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+ <span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</code></pre>
+<h1><a id="_417"></a>三.发现问题以及如何解决</h1>
+<h2><a id="__418"></a>问题一 如何将做的网页托管到平台上</h2>
+<p>一开始在托管到github上时遇到了一些问题，最后解决方法如下：<br>
+一、打开github的主页<br>
+链接: <a href="https://github.com/">github</a><br>
+二、创建一个新的仓库<img src="./images/github1.png" alt="在这里插入图片描述"><br>
+三、给自己的新仓库改个名字<br>
+<img src="./images/github2.png" alt="在这里插入图片描述"><br>
+四、直接进行上传文件<br>
+<img src="./images/github3.png" alt="在这里插入图片描述"><br>
+五、上传后提交<br>
+<img src="./images/github4.png" alt="在这里插入图片描述"><br>
+六、选择setting/设置，并点击页面里的链接“看看这里”<br>
+<img src="https://img-blog.csdnimg.cn/20210609194518597.png" alt="在这里插入图片描述"><br>
+七、这样网页就已经托管到github中了。</p>
+<h2><a id="_432"></a>关于三国演义</h2>
+<p>1.看过好几遍三国演义，做这个网页的时候却发现很多想法无法表达出来，一句话要准确输出，必须基于完全的掌握了解。</p>
+<p>2.在网上下载的图片都很糊，自己在电视剧中截图去掉水印之后也糊，选图片也很难，配图配色都不够漂亮。</p>
+<h1><a id="_437"></a>四.心得体会</h1>
+<p>经过了本次课程结业实验，我进行了第一次简单的网页设计，应用了比较简单的MDB框架，学习了HTML的各种标签，了解CSS进行页面的美化和调整。虽然最后的结果还是不太如人意，感觉还是有点丑。但是在实践过程中，我掌握了许多有关网页前端和后端制作的知识，也对三国演义更深刻了一点。我喜欢三国演义，我希望可以通过我的推荐让更多的人去读读这本名著，所以我会好好学习制作网页的知识，让我的网页看起来更好看，更有魅力。</p>
+</div>
+</body>
+
+</html>
